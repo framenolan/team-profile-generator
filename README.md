@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Deployed Site
 
@@ -13,7 +13,6 @@
 * [Usage](#usage)
 * [Future Development](#future-development)
 * [Credits](#credits)
-* [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
 * [License](#license)
@@ -30,7 +29,6 @@ All used modules are included in the package.json. To install the necessary modu
 npm install
 ```
 
-
 ## Technologies
 
 - HTML
@@ -41,25 +39,45 @@ npm install
 
 ## Usage
 
+Once installed, initialize the app by opening your command terminal and running the following code:
 
+```md
+node index.js
+```
+
+The app will prompt you to enter the team Manager information. Once complete, you'll be presented with a menu to either add another team member or finalize the team. If you choose to add another member, you'll be prompted to choose their role, either Engineer or Intern, and then prompted with an additional seried of questions. Once all team members are added, choose Finalize Team to print the HTML page. This page will be created in the root folder of the application and will be called 'myteam.html'.
+
+Please reference the following video and screenshots for a walkthrough:
+
+[Video Walkthrough](https://drive.google.com/file/d/14cCXosKywzB4o4oRk7p-BFxCAbACx1DG/view)
+
+![screenshot of first menu](./Assets/Screenshot_Menu.png)
+
+![screenshot of role selection](./Assets/Screenshot_Menu2.png)
+
+![screenshot of finished site](./Assets/Screenshot_Finished_Output.png)
 
 ## Future Development
 
+There are no plans for future development of this app.
+
 ## Credits
 
-- Nolan Frame
-
-## Contributing
-
-
+- Nolan Frame: [https://github.com/framenolan](https://github.com/framenolan)
 
 ## Tests
 
+This app includes four test packages for the four object classes. To run these tests, enter the following command into the terminal:
 
+```md
+npm run test
+```
+
+The testing package used in this app is [Jest](https://www.npmjs.com/package/jest).
 
 ## Questions
 
-Please checkout [https://github.com/framenolan/](https://github.com/framenolan/) or email me at [](mailto:).
+Please visit [https://github.com/framenolan/](https://github.com/framenolan/) for additional contact.
 
 ## License
 
