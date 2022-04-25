@@ -1,3 +1,5 @@
+// Starter code provided by instructor
+
 // create the team
 const generateTeam = team => {
 

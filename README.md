@@ -20,16 +20,24 @@
 
 ## Description
 
-
+This command line app takes user input to build an HTML page that includes basic information about members of a team. The app begins by asking for team Manager information, then provides the user a menu with options to add additional team members or to finalize the team and generate the HTML page. If the user chooses to add additional team members, then they are prompted to choose which role the new team member fills, either Engineer or Intern. Each option requests a different set of input. Once the input for each team member is complete, then the user is sent back to the menu to choose to add another team member or finalize the team.
 
 ## Installation
 
+All used modules are included in the package.json. To install the necessary modules used in this app, run the following command in your terminal:
+
+```md
+npm install
+```
 
 
 ## Technologies
 
 - HTML
-- JavaScript,Node.js
+- CSS
+- [Bootstrap CSS Framework](https://getbootstrap.com/)
+- JavaScript
+- Node.js
 
 ## Usage
 

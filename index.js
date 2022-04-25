@@ -1,12 +1,17 @@
+// imports classes and modules to be used in app
 const inquirer = require('inquirer')
 const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
-// const { chown } = require('fs')
-// const Choice = require('inquirer/lib/objects/choice')
+const fs = require('fs')
+const generateTeam = require('./util/generateHtml')
+
+// array that will be built as user adds new team members
 const team = [];
 
+
+// function that initialized team build, starting with team Manager
 function newManager () {
     inquirer
     .prompt([
@@ -36,6 +41,8 @@ function newManager () {
         console.log(newManager)
         team.push(newManager)
         console.log(team)
+
+        // function to give user option to add additional team members or finalize team
         menu();
     })
 }
@@ -69,6 +76,8 @@ function addEngineer() {
         console.log(newEngineer)
         team.push(newEngineer)
         console.log(team)
+
+        // recursive function that allows user to continue adding team members or finalize team
         menu();
     })
 }
@@ -102,10 +111,13 @@ function addIntern() {
         console.log(newIntern)
         team.push(newIntern)
         console.log(team)
+
+        // recursive function that allows user to continue adding team members or finalize team
         menu();
     })
 }
 
+// function to categorize whether new team member should be created using Engineer questions or Intern questions
 function newEmployee () {
     inquirer
     .prompt([
@@ -127,6 +139,7 @@ function newEmployee () {
     })
 }
 
+// recursive function that allows user to add a new team member or to exit the team building process and create HTML page
 function menu() {
     inquirer
     .prompt([
@@ -142,9 +155,15 @@ function menu() {
             newEmployee();
         } else {
             console.log("print the page")
+            
+            // creates HTML page using data entered by user
+            fs.writeFile('myteam.html', generateTeam(team), (err) =>
+                err ? console.error(err) : console.log('Success!')
+            );
         }
     })
 }
 
 newManager();
+
 
